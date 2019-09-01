@@ -1,0 +1,40 @@
+.container {
+  min-width: 1280px;
+}
+
+.row {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.button {
+  background: #e72e0d;
+  color: #fff;
+  width: 413px;
+  height: 79px;
+  line-height: 79px;
+  text-align: center;
+  display: block;
+  font-size: rem(18);
+  margin: 0 auto;
+  transition: .3s ease-out;
+}
+
+.button:hover {
+  opacity: 0.8;
+}
+
+h3 {
+  font-size: rem(35);
+  text-align: center;
+  color: #000;
+  line-height: rem(68);
+  margin-bottom: 20px;
+  font-family: 'renner';
+}
+
+.flex {
+  display: -ms-flexbox;
+  display: flex;
+}

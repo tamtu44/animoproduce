@@ -1,0 +1,248 @@
+// CSS Document
+$config_sp_scale_img : 2.4;
+$design_width: 768;
+$config_base_fontsize : 10;
+$config_sp_scale_font : 2;
+
+// SP width _____________________________
+@function px2($px_psd) {
+  $result: $px_psd / $config_sp_scale_img;
+  @return #{$result}px;
+}
+
+// vw( designSIZE ) vw指定
+@function vw($design_width_psd) {
+  $vw: $design_width_psd / $design_width * 100;
+  @return #{$vw}vw;
+}
+
+@function vw2($design_width_psd) {
+  $vw: $design_width_psd / 1417 * 100;
+  @return #{$vw}vw;
+}
+
+// pw( designSIZE ) %指定
+@function pw($base_design_width, $design_width_psd) {
+  $pw: $design_width_psd / $base_design_width * 100 + '%';
+  @return #{$pw};
+}
+
+// font _____________________________
+@function rem($font_size_psd) {
+  $rem: $font_size_psd / $config_base_fontsize;
+  @return #{$rem}rem;
+}
+
+// rem2( designSIZE)
+@function rem2($font_size_psd) {
+  $rem: $font_size_psd / $design_width * 100;
+  @return #{$rem}vw;
+}
+
+//------------------------------------| CSS raw |------------------------------------
+// used for creating CSS only triangles
+// example:
+// .element {
+//   &::before {
+//     @include css-triangle(blue, down);
+//   }
+// }
+@mixin css-raw($right, $top, $rotate, $color) {
+  position: absolute;
+  right: $right;
+  top: $top;
+  display: block;
+  width: 7px;
+  height: 7px;
+  border-top: 2px solid $color;
+  border-right: 2px solid $color;
+  cursor: pointer;
+  transform: rotate($rotate) translate(-50%, -50%);
+}
+@mixin btn_pc($w, $h) {
+  width: $w;
+  height: $h;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  border: 1px solid #000;
+  position: relative;
+  font-size: rem(16.02);
+  color: #000;
+  transform: perspective(1px) translateZ(0);
+  transition: color .3s;
+}
+//------------------------------------| CSS Triangle |------------------------------------
+// used for creating CSS only triangles
+// example:
+// .element {
+//   &::before {
+//     @include css-triangle(blue, down);
+//   }
+// }
+@mixin css-triangle($color, $direction, $size: 6px, $position: absolute, $round: false) {
+  @include pseudo($pos: $position);
+
+  width: 0;
+  height: 0;
+
+  @if $round {
+    border-radius: 3px;
+  }
+
+  @if $direction == down {
+    border-left: $size solid transparent;
+    border-right: $size solid transparent;
+    border-top: $size solid $color;
+    margin-top: 0 - round($size / 2.5);
+  }
+
+  @else if $direction == up {
+    border-left: $size solid transparent;
+    border-right: $size solid transparent;
+    border-bottom: $size solid $color;
+    margin-bottom: 0 - round($size / 2.5);
+  }
+
+  @else if $direction == right {
+    border-top: $size solid transparent;
+    border-bottom: $size solid transparent;
+    border-left: $size solid $color;
+    margin-right: -$size;
+  }
+
+  @else if  $direction == left {
+    border-top: $size solid transparent;
+    border-bottom: $size solid transparent;
+    border-right: $size solid $color;
+    margin-left: -$size;
+  }
+}
+
+//------------------------------------| Form input placeholder text |------------------------------------
+// example:
+// input,
+// textarea {
+//   @include input-placeholder {
+//     color: $grey;
+//   }
+// }
+@mixin input-placeholder {
+  &.placeholder { @content; }
+  &:-moz-placeholder { @content; }
+  &:-ms-input-placeholder { @content; }
+  &:-webkit-input-placeholder { @content; }
+}
+
+
+//------------------------------------| Hide text |------------------------------------
+// example:
+// .element {
+//   @include hide-text;
+// }
+@mixin hide-text($break: false, $indent: 200%, $align: left, $overflow: hidden) {
+  @if $break {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+  }
+  text: {
+    indent: $indent;
+    align: $align;
+  }
+
+  font-size: 0;
+  white-space: nowrap;
+
+  @if $overflow {
+    overflow: $overflow;
+  }
+}
+
+
+//------------------------------------| Helper mixins |------------------------------------
+@mixin pseudo($display: block, $pos: absolute, $content: '') {
+  content: $content;
+  display: $display;
+  position: $pos;
+}
+
+// Push center
+@mixin center-box($top, $bottom, $left) {
+  position: absolute;
+  top: $top;
+  bottom: $bottom;
+  left: $left;
+  transform: translate(-50%, -50%);
+}
+
+@mixin center-flex($display: flex, $center: center) {
+  display: $display;
+  justify-content: $center;
+  align-items: $center;
+}
+
+// Contain floats / clearfix
+@mixin cf {
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+// Max text
+@mixin truncate($truncation-boundary) {
+  max-width: #{$truncation-boundary}px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+// Hide from both screenreaders and browsers
+@mixin hidden {
+  display: none;
+  visibility: hidden;
+}
+
+@mixin visible($state: 'block') {
+  display: unquote($state);
+  visibility: visible;
+}
+
+// Hide only visually, but have it available for screenreaders
+@mixin vh($focusable: false) {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+
+  @if $focusable {
+    @include vh-focusable;
+  }
+}
+
+
+// Allow the element to be focusable when navigated to via the keyboard
+@mixin vh-focusable {
+  &:active,
+  &:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+  }
+}
+
+// Hide visually and from screenreaders, but maintain layout
+@mixin invisible {
+  visibility: hidden;
+}

@@ -1,0 +1,29 @@
+@charset "utf-8";
+.company {
+  padding: vw(80) vw(35) vw(150);
+  &_info {
+    margin: vw(100) 0 vw(150);
+    border-top: 1px solid #000;
+    dl {
+      display: flex;
+      border-bottom: 1px solid #000;
+      padding: vw(40) 0;
+      font-size: rem2(30);
+      line-height: vw(48);
+      dt {
+        width: vw(200);
+        font-weight: bold;
+      }
+      dd {
+        width: vw(440);
+        a[href^="tel:"]{
+          color: #000;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  iframe {
+    height: vw(480);
+  }
+}

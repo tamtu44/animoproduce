@@ -1,0 +1,18 @@
+@charset "utf-8";
+footer {
+  background: #e72e0d;
+  padding: 70px 0 300px;
+  ul {
+    justify-content: center;
+    li {
+      width: 40px;
+      margin: 0 20px;
+      a {
+        transition: .3s ease-out;
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,119 @@
+@charset "utf-8";
+
+.product {
+  padding: 120px 0 100px;
+  h3 {
+    margin-bottom: 70px;
+  }
+  .tabs {
+    position: relative;
+    margin-bottom: 50px;
+    &:before, &:after {
+      content: "";
+      position: absolute;
+      width: 50%;
+      height: 1px;
+      background: #000;
+    }
+    &:before {
+      top: 0;
+      left: 0;
+    }
+    &:after {
+      bottom: 0;
+      right: 0;
+    }
+    li {
+      background: #000;
+      // width: calc(100% / 5);
+      a {
+        display: block;
+        padding: 30px 39px;
+        color: #fff;
+        font-size: rem(16);
+        text-decoration: none;
+        transition: .3s ease;
+      }
+      &.active,&:hover {
+        background: #fff;
+        a {
+          color: #e72e0d;
+        }
+      }
+    }
+  }
+  .tab_content {
+    flex-wrap: wrap;
+    display: flex;
+    .tab_inner {
+      width: calc(100% / 3);
+      padding: 25px 20px;
+      a {
+        text-decoration: none;
+        color: #000;
+        figure {
+          figcaption {
+            font-size: 1.6rem;
+            line-height: 2.3rem;
+            margin-top: 20px;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+  .tab_content_active {
+    display: block;
+  }
+  .product_det_tab {
+    padding: 0 100px;
+    figure {
+      width: 40%;
+    }
+    .intro_cv {
+      width: 60%;
+      padding-left: 60px;
+      h4 {
+        font-size: rem(20);
+        line-height: rem(23);
+        margin-bottom: 30px;
+      }
+      a {
+        color: #e72e0d;
+        line-height: rem(40);
+        font-size: rem(15);
+        margin-bottom: 70px;
+        display: block;
+      }
+      .intro_det {
+        p {
+          margin-bottom: 60px;
+          font-size: rem(14);
+          line-height: rem(30);
+        }
+      }
+    }
+  }
+  .embed_video {
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    padding-bottom: 50%;
+    /* 16:9 の高さなので 56.25% (= 9 ÷ 16) */
+    position: relative;
+    iframe {
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+  }
+  .scene {
+    margin: 100px -15px 0;
+    li {
+      width: calc(100% / 4);
+      margin: 0 15px;
+    }
+  }
+}

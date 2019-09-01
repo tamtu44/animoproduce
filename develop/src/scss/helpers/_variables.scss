@@ -1,0 +1,45 @@
+//
+// variables
+//------------------------------------------------------------------------
+
+// ---- font-family
+$font-web: YuGothic , "小塚ゴシック Pr6N", "M PLUS Rounded 1c", 'Varela Round', Ropa Sans ,icomoon, Avenir,"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",Osaka, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+
+// ---- breakpoints
+$breakpoints: (
+  'phone-small': 320px,
+  'phone': 375px,
+  'phone-wide': 414px,
+  'phablet': 560px,
+  'tablet-small': 640px,
+  'tablet': 768px,
+  'tablet-wide': 1024px,
+  'desktop': 1280px,
+  'desktop-wide': 1440px
+) !default;
+
+// ---- font-size
+$p: 14px;
+$p-small: 12px;
+$p-medium: 18px;
+$p-large: 24px;
+
+// ---- line-height
+$lh: 1;
+$lh-x-small: 1.1;
+$lh-small: 1.25;
+$lh-large: 1.75;
+
+// ---- font-weight
+$w-light: 300;
+$w-normal: 400;
+$w-semibold: 600;
+$w-bold: 700;
+$w-heavy: 800;
+
+// ---- base-url
+$base-url: '../images' !default;
+
+//------------------------------------| Color |------------------------------------
+// https://css-tricks.com/what-do-you-name-color-variables/#comment-1653710
+// http://chir.ag/projects/name-that-color

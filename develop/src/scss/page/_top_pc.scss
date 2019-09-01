@@ -1,0 +1,81 @@
+
+//------------------------------------------------------------------------
+@charset "utf-8";
+.top_main {
+  padding: 0 0 60px;
+  p {
+    color: #000;
+  }
+  a {
+    text-decoration: none;
+    transition: .3s ease-out;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+  .work {
+    padding: 60px 0 80px;
+    .work_txt {
+      text-align: center;
+      margin-top: 8px;
+      h4 {
+        color: #000;
+        font-size: rem(24);
+        line-height: rem(40);
+        margin-bottom: 10px;
+      }
+      p {
+        font-size: rem(15);
+      }
+    }
+  }
+  .topic {
+    padding: 80px 0 !important;
+    background: url('../images/topic_bg.png')no-repeat;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    ul {
+      margin-bottom: 50px;
+      li {
+        width: calc(100% /3);
+        margin: 0 23px;
+      }
+    }
+    .topic_txt {
+      background: #fff;
+      padding: 23px 15px;
+      margin-top: -4px;
+      time {
+        font-size: rem(14);
+        line-height: rem(22);
+        color: #000;
+      }
+      .txt_bold {
+        font-weight: bold;
+        line-height: rem(15);
+        line-height: rem(26);
+        margin-bottom: 6px;
+      }
+      p {
+        font-size: 14px;
+        line-height: rem(22px);
+      }
+    }
+  }
+  .artists {
+    padding: 70px 0 100px;
+    ul {
+      margin: 74px 0 77px;
+      li {
+        width: calc(100% / 5);
+        margin: 0 23px;
+         p {
+           margin-top: 15px;
+           font-size: rem(16);
+           text-align: center;
+         }
+      }
+    }
+  }
+}

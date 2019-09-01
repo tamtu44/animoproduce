@@ -1,0 +1,44 @@
+@charset "utf-8";
+
+html {
+  font-size: 10px;
+}
+
+//1. Configuration and helpers
+@import "helpers/variables";
+@import "helpers/mixin";
+
+// 2. Vendors
+// @import "vendor/jquery";
+@import "vendor/slick";
+@import "/node_modules/wowjs/css/libs/animate.css";
+// @import "vendor/slick-theme";
+// 3. Base
+@import "base/normalize";
+@import "base/font";
+// @import "base/font";
+@import "common/common";
+
+// 6. Page-specific styles
+
+@media screen and (min-width: 768px), print {
+  @import "page/top_pc";
+  @import "page/product_pc";
+  @import "page/topic_pc";
+  @import "page/artist_pc";
+  @import "page/company_pc";
+  @import "common/header_pc";
+  @import "common/footer_pc";
+  @import "common/common_pc";
+}
+@media screen and (max-width: 768px) {
+  @import "page/top_sp";
+  @import "page/product_sp";
+  @import "page/topic_sp";
+  @import "page/artist_sp";
+  @import "page/company_sp";
+  @import "common/header_sp";
+  @import "common/footer_sp";
+  @import "common/common_sp";
+
+}

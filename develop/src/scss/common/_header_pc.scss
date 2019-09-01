@@ -1,0 +1,144 @@
+//
+// header
+//------------------------------------------------------------------------
+@charset "utf-8";
+.header {
+  position: relative;
+  &:before {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    border: 0 solid transparent;
+    border-right-width: 77px;
+    border-left-width: 0px;
+    border-bottom: 43.7vw solid #fff;
+    left: 25%;
+    top: 0;
+    z-index: 3;
+  }
+  &.arr_head {
+    &:before {
+      border-right-width: 53px;
+      border-bottom: 30vw solid #fff;
+    }
+  }
+  .logo {
+    position: absolute;
+    left: 70px;
+    bottom: 212px;
+    a {
+      font-size: 0;
+      width: 215px;
+      display: block;
+    }
+  }
+  .mv {
+    position: relative;
+    width: 75%;
+    margin-left: auto;
+    overflow: hidden;
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      background: url('../images/arrow_red.png') no-repeat;
+      width: 161px;
+      height: 401px;
+      background-size: contain;
+      left: -33px;
+      top: 0;
+      z-index: 2;
+    }
+    h2 {
+      position: absolute;
+      bottom: 94px;
+      left: 150px;
+      width: 335px;
+    }
+  }
+}
+
+.nav {
+  background: #000;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 4;
+  left: 0;
+  right: 0;
+  a {
+    display: block;
+    font-size: rem(16);
+    text-align: center;
+    position: relative;
+    text-decoration: none;
+    overflow: hidden;
+    color: #fff;
+    transition: all 0.3s linear 0s;
+    padding: 30px 40px;
+  }
+  ul {
+    &:after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+    li {
+      position: relative;
+      float: left;
+      .dropdown {
+        display: none;
+        overflow: hidden;
+        position: absolute;
+        top: 100%;
+        width: 536px;
+        height: 100px;
+        background: #e72e0d;
+        padding: 0 20px;
+        li {
+          &:hover {
+            a {
+              display: block;
+              border-bottom: 5px solid #000;
+            }
+          }
+        }
+      }
+      &:hover {
+        a {
+          background: #e72e0d;
+        }
+      }
+    }
+  }
+  .onlineshop {
+    background: #0098af;
+    width: 327px;
+    transition: .3s ease-out;
+    &:hover {
+      opacity: 0.8;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      background: url('../images/key.png')no-repeat;
+      width: 21px;
+      height: 29px;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 30px;
+      background-size: contain;
+    }
+  }
+}
+// .menu_sub {
+//   margin-top: -4px;
+// }
+.list_photo img {
+  transition: transform 2s, filter 1.5s ease-in-out;
+  transform-origin: center center;
+}
+.list_photo .slick-active img {
+  transform: scale(1.1);
+}

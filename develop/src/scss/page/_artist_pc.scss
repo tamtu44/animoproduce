@@ -1,0 +1,154 @@
+@charset "utf-8";
+.artist {
+  padding: 154px 0 100px;
+  h3 {
+    margin-bottom: 60px;
+  }
+  &_list {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 -20px;
+    padding: 0 100px;
+    li {
+      width: 202px;
+      margin: 20px 20px;
+      a {
+        text-decoration: none;
+        color: #000;
+        transition: all 0.3s ease;
+        display: block;
+        &:hover {
+          img {
+            border: 14px solid #e72e0d;
+          }
+        }
+        span {
+          text-align: center;
+          display: block;
+          font-size: rem(14);
+          line-height: rem(22);
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+  .fresher {
+    margin-top: 50px;
+    figure {
+      width: 75%;
+      margin: 0 auto;
+    }
+  }
+  &_breadcrumb {
+    margin-bottom: 55px;
+    li {
+      a {
+        text-decoration: none;
+        color: #000;
+        font-size: rem(15);
+        line-height: rem(24);
+        transition: .3s ease;
+        margin-right: 5px;
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+  &_intro {
+    margin-bottom: 60px;
+    .intro_photo {
+      width: 40%;
+      position: relative;
+      &:after {
+        content: "";
+        position: absolute;
+        background: url('../images/art_arrow.png') no-repeat;
+        width: 100%;
+        height: 99px;
+        top: -22px;
+        left: 0;
+        background-size: cover;
+      }
+      .sub_img {
+        margin-top: 20px;
+        li {
+          width: 80px;
+          &:not(:last-child) {
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+    .intro_info {
+      width: 60%;
+      padding-left: 80px;
+      h4 {
+        font-size: rem(30);
+        line-height: rem(48);
+        margin-bottom: 50px;
+        span {
+          font-size: rem(20);
+          line-height: rem(30);
+          display: block;
+          border-top: 1px solid #000;
+          padding-top: 10px;
+          margin-top: 10px;
+        }
+      }
+      dl {
+        font-size: rem(15);
+        line-height: rem(23);
+        display: flex;
+        border-bottom: 1px solid #000;
+        padding: 20px 0;
+        dt {
+          width: 90px;
+          padding: 0 12px;
+        }
+        dd {
+          width: calc(100% - 90px);
+        }
+      }
+      figure {
+        margin-top: 20px;
+        width: 55px;
+      }
+    }
+  }
+  &_blog {
+    &:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    .bg_cv {
+      background: url('../images/art_det_bg.png') no-repeat;
+      background-position: top;
+      width: 100%;
+      background-size: cover;
+    }
+    .blog_inner {
+      float: left;
+      width: 50%;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+      &:nth-of-type(2) {
+        p {
+          margin-bottom: 25px;
+        }
+      }
+      h4 {
+        font-size: rem(24);
+        line-height: rem(30);
+        margin-bottom: 40px;
+        font-family: 'renner';
+      }
+      p {
+        font-size: rem(15);
+        line-height: rem(35);
+        padding-right: 80px;
+      }
+    }
+  }
+}

@@ -1,0 +1,135 @@
+@charset "utf-8";
+.artist {
+  padding: vw(80) 0 vw(150);
+  h3 {
+    margin-bottom: vw(80);
+  }
+  &_list {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    display: flex;
+    padding: 0 vw(35);
+    li {
+      width: vw(330);
+      margin-bottom: vw(80);
+      a {
+        text-decoration: none;
+        color: #000;
+        transition: all 0.3s ease;
+        display: block;
+        &:hover {
+          img {
+            border: 14px solid #e72e0d;
+          }
+        }
+        span {
+          text-align: center;
+          display: block;
+          font-size: rem2(32);
+          line-height: vw(48);
+          margin-top: vw(15);
+        }
+      }
+    }
+  }
+  .fresher {
+    margin-top: vw(40);
+  }
+  &_breadcrumb {
+    margin-bottom: vw(80);
+    padding-left: vw(35);
+    display: flex;
+    li {
+      position: relative;
+      margin-right: vw(20);
+      a {
+        text-decoration: none;
+        color: #000;
+        font-size: rem2(32);
+        line-height: vw(48);
+        transition: .3s ease;
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+  &_intro {
+    padding: 0 vw(35);
+    .intro_photo {
+      position: relative;
+      margin: 0 auto;
+      &:after {
+        content: "";
+        position: absolute;
+        background: url('../images/art_arrow.png') no-repeat;
+        width: 100%;
+        height: vw(180);
+        top: vw(-50);
+        left: 0;
+        background-size: cover;
+      }
+      .sub_img {
+        display: flex;
+        margin-top: vw(40);
+        li {
+          width: vw(160);
+          &:not(:last-child) {
+            margin-right: vw(20);
+          }
+        }
+      }
+    }
+    .intro_info {
+      padding: vw(90) 0;
+      h4 {
+        font-size: rem2(36);
+        line-height: vw(52);
+        margin-bottom: vw(55);
+        span {
+          font-size: rem2(34);
+          line-height: vw(50);
+          display: block;
+          border-top: 1px solid #000;
+          padding-top: vw(20);
+          margin-top: vw(20);
+        }
+      }
+      dl {
+        font-size: rem2(30);
+        line-height: vw(48);
+        display: flex;
+        border-bottom: 1px solid #000;
+        padding: vw(40) 0;
+        dt {
+          width: vw(180);
+          padding: 0 12px;
+        }
+        dd {
+          width: vw(460);
+        }
+      }
+      figure {
+        margin-top: vw(40);
+        width: vw(80);
+      }
+    }
+  }
+  &_blog {
+    padding: vw(20) vw(35);
+    .blog_inner {
+      margin-bottom: vw(50);
+      &:nth-of-type(2) {
+        p {
+          margin-bottom: vw(20);
+        }
+      }
+      h4 {
+        font-size: rem2(34);
+        line-height: vw(48);
+        margin-bottom: vw(30);
+        font-family: 'renner';
+      }
+    }
+  }
+}

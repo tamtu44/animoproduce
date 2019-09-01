@@ -1,0 +1,19 @@
+@charset "utf-8";
+footer {
+  background: #e72e0d;
+  padding: vw(70) 0 vw(100);
+  ul {
+    display: flex;
+    justify-content: center;
+    li {
+      width: vw(70);
+      margin: 0 vw(40);
+      a {
+        transition: .3s ease-out;
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+body,
+td,
+th,
+input,
+textarea {
+  font-family: "YuGothic";
+}
+
+img {
+  width: 100%;
+}
+
+.show_sp {
+  display: block;
+}
+
+.show_pc {
+  display: none;
+}

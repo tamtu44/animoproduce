@@ -1,0 +1,78 @@
+@charset "utf-8";
+
+.top_main {
+  padding: 0 0 vw(100);
+  a {
+    text-decoration: none;
+    transition: .3s ease-out;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+  .work {
+    padding: vw(80) 0;
+    .work_txt {
+      text-align: center;
+      margin-top: vw(25);
+      padding: 0 vw(40);
+      h4 {
+        color: #000;
+        font-size: rem2(32);
+        line-height: vw(48);
+        margin-bottom: vw(15);
+      }
+    }
+    ul {
+      li {
+        margin-bottom: vw(55);
+      }
+    }
+  }
+  .topic {
+    padding: vw(80) 0 !important;
+    background: url('../images/topic_bg.png')no-repeat;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    ul {
+      margin-bottom: vw(40);
+      li {
+        width: vw(675);
+        margin: 0 auto vw(60);
+      }
+    }
+    .topic_txt {
+      background: #fff;
+      padding: vw(25) vw(20);
+      margin-top: vw(-4);
+      time {
+        font-size: rem2(24);
+        line-height: vw(30);
+        color: #000;
+        margin-bottom: vw(20);
+        display: block;
+      }
+      .txt_bold {
+        font-weight: bold;
+        margin-bottom: vw(20);
+        line-height: vw(45);
+      }
+    }
+  }
+  .artists {
+    padding: vw(80) 0;
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      li {
+        width: calc(100% / 2);
+        padding: 0 vw(40);
+        margin-bottom: vw(80);
+         p {
+           margin-top: vw(10);
+           text-align: center;
+         }
+      }
+    }
+  }
+}
